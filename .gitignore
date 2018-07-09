@@ -1,0 +1,16 @@
+/.idea/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# swap file
+*.swp
+
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

@@ -1,12 +1,12 @@
 import requests
 import time
 
-url = "http://apps-new-danlu-vm-dev.danlu.netease.com:44888/base/heartbeat"
-workers = ["worker1", "worker2", "worker3"]
+url = "http://apps-sl.danlu.netease.com:35890/base/heartbeat"
+workers = ["ray-dch-0-8cf6bc45f-kdfxw"]
 
 while True:
     for node in workers:
-        data = {"namespace": "default", "rayClusterName": "raycluseter-test", "name": node,
+        data = {"namespace": "1000-daicanhuang-part-1111", "rayClusterName": "raycluseter-test", "name": node,
                 "nodeType": "worker"}
         response = requests.post(url, json=data)
         print(node, "heartbeat request Status code:", response.status_code, response.content.decode("utf-8"))
